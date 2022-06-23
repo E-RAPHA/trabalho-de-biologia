@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<head>
+  
+    <img src="./assets/vitor.png" class="vitor" id="vit">
+    <img src="./assets/raphael.png" class="rapha" id="rap">
+    <img src="./assets/sadao.png" class="sadao" id="sad">
+    <img src="./assets/pedro.png" class="pedro" id="ped">
+
+
+    <meta charset="UTF-8">
+    <title>menu VIRUS QUIZ</title>
+    <img src="./assets/pnV.png" class="logo" id="log">
+    <br>
+    <button onclick="quizIR()">QUIZ</button>
+    <br>
+    <button onclick="cred()">CREDITOS</button>
+</head>
+
+<body>
+    <script>
+        function cred(){ window.alert('quiz: raphael, slides:vitor, capa dos slides:pedro')}
+    </script>
+    <script src="./javaScript/menu.js"></script>
+
+
+    </script>
+
+    <style>
+  
+        .pedro{
+            height: 120px;
+            margin-top: 800px;
+            position: absolute;
+            margin-left: 1820px;
+            transform: rotate(1deg);
+            z-index: 2;
+        }
+        .sadao{
+            height: 320px;
+            margin-top: 800px;
+            position: absolute;
+            transform: rotate(1deg);
+            margin-left: -230px;
+            z-index: 2;
+        }
+        .rapha{
+            height: 300px;
+            position: absolute;
+            margin-left: 1520px;
+            margin-top: -200px;
+            transform: rotate(1deg);
+            z-index: 2;
+        }
+        .vitor {
+            height: 300px;
+            position: absolute;
+            margin-left: -230px;
+            margin-top: -200px;
+            transform: rotate(1deg);
+            z-index: 2;
+        }
+
+        body {
+            background-image: url("./assets/fundo.jpg");
+            overflow: -moz-scrollbars-vertical;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            z-index: -2;
+        }
+
+        .logo {
+            height: 500px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 1;
+            display: block;
+            transform: rotate(1deg);
+        }
+
+        button {
+            width: 400px;
+            height: 60px;
+            border-radius: 20px;
+            font-size: 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+
+        }
+
+        button:hover {
+            background-color: rgb(156, 252, 255);
+        }
+        a{
+            color: aliceblue;
+            font-size: 20px;
+        }
+    </style>
+
+</body>
+
+<a href="https://github.com/E-RAPHA/trabalho-de-biologia">repositorio       Raphael Burad <a>
+
+</html>

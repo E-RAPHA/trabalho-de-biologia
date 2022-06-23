@@ -1,0 +1,66 @@
+body {
+    background-color: #9168b5;
+    z-index: -2;
+    overflow: -moz-scrollbars-vertical;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.virus3{
+    height: 70px;
+    top: -90px; 
+    left: 0px;
+    z-index: 3;    
+    position: absolute;
+}
+.virus1 {
+    height: 200px;
+    margin-top: -1px;
+    margin-left: -90px;
+    z-index: -1;
+    transform: rotate(1deg);
+    position: absolute;
+}
+.virus2{
+    height: 150px;
+    margin-top: 1px;
+    margin-left: -30px;
+    z-index: -1;
+    transform: rotate(90deg);
+    position: absolute;
+}
+
+
+.qsts {
+    position: absolute;
+    width: 800px;
+    height: 700px;
+    border-radius: 5%;
+    background-color: rgba(86, 93, 216, 0.4);
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    z-index: 2;
+    display: block;
+    top: 50%;
+    left: 50%;
+    margin: -350px 0 0 -400px;
+
+
+
+}
+.perg{
+    text-align: center;
+    
+    font-family: sans-serif;
+    color: rgb(153, 4, 4);
+    
+}
+button{
+    width: 600px;
+    height:60px;
+    border-radius: 20px;
+    font-size: 25px;
+
+}
+button:hover{
+    background-color: green;
+}

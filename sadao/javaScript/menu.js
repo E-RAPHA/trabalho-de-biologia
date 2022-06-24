@@ -1,6 +1,11 @@
 let tLarg = window.innerWidth;
 let tAlt = window.innerHeight;
 
+function slides() {
+    var loc = window.location.pathname;
+    var dir = loc.substring(0, loc.lastIndexOf('/'));
+    window.location.href = dir + '/slides/slides.html'
+}
 function quizIR() {
     movPed()
     movSad()
@@ -79,7 +84,7 @@ let pTop = 700
 let pLeft = 1620
 let rotP = 1
 let LoH = 500
-let rotLG =0
+let rotLG = 0
 function movPed() {
     let MP = setInterval(() => {
         document.getElementById('ped').style.marginTop = `${pTop}px`
@@ -109,21 +114,21 @@ function movPed() {
             setTimeout(() => {
                 setInterval(() => {
                     document.getElementById('log').style.height = `${LoH}px`
-                   
-                    LoH+=4
+
+                    LoH += 4
                 }, 10);
             }, 1.5 * 1000)
             setTimeout(() => {
                 setInterval(() => {
                     document.getElementById('log').style.transform = `rotate(${rotLG}deg)`
-                    rotLG+=3
+                    rotLG += 3
                 }, 10);
             }, 2.3 * 1000)
             setTimeout(() => {
                 var loc = window.location.pathname;
                 var dir = loc.substring(0, loc.lastIndexOf('/'));
                 window.location.href = dir + '/quiz/quiz.html'
-            }, 4.3* 1000)
+            }, 4.3 * 1000)
 
         }
     }, 20);

@@ -11,33 +11,36 @@
     <meta charset="UTF-8">
     <title>menu VIRUS QUIZ</title>
     <img src="./assets/pnV.png" class="logo" id="log">
-    <br>
     <button onclick="quizIR()">QUIZ</button>
     <br>
+    <button onclick="slides()">SLIDES</button>
+    <br>
     <button onclick="cred()">CREDITOS</button>
+    <a href="https://github.com/E-RAPHA/trabalho-de-biologia">repositorio Raphael Burad ㅤ<a>
+
+    <a onclick="countGithub('E-RAPHA/trabalho-de-biologia');">linhas quantidade</a>
 </head>
 
 <body>
     <script>
-        if (window.innerHeight >=800||window.innerHeight <=500) {
+        if (window.innerHeight >= 800 || window.innerHeight <= 500) {
             window.alert('a bagaça pode dar merda a resolução é meio difeerenteeee')
         }
-
-
 
 
         function cred() { window.alert('quiz: raphael, slides:vitor, capa dos slides:pedro') }
         'use strict';
 
-async function countGithub(repo) {
-    const response = await fetch(`https://api.github.com/repos/${repo}/stats/contributors`)
-    const contributors = await response.json();
-    const lineCounts = contributors.map(contributor => (
-        contributor.weeks.reduce((lineCount, week) => lineCount + week.a - week.d, 0)
-    ));
-    const lines = lineCounts.reduce((lineTotal, lineCount) => lineTotal + lineCount);
-    window.alert(lines);
-}
+        //STACKOVERFLOWKKKKKK
+        async function countGithub(repo) {
+            const response = await fetch(`https://api.github.com/repos/${repo}/stats/contributors`)
+            const contributors = await response.json();
+            const lineCounts = contributors.map(contributor => (
+                contributor.weeks.reduce((lineCount, week) => lineCount + week.a - week.d, 0)
+            ));
+            const lines = lineCounts.reduce((lineTotal, lineCount) => lineTotal + lineCount);
+            window.alert(lines);
+        }
  // or count anything you like
 
     </script>
@@ -96,6 +99,7 @@ async function countGithub(repo) {
             display: block;
             margin-left: auto;
             margin-right: auto;
+            margin-top: -10px;
             z-index: 1;
             display: block;
             transform: rotate(1deg);
@@ -120,12 +124,13 @@ async function countGithub(repo) {
         a {
             color: aliceblue;
             font-size: 20px;
+            margin-top: -150px;
+            position: relative;
+            z-index: 4;
         }
     </style>
 
 </body>
 
-<a href="https://github.com/E-RAPHA/trabalho-de-biologia">repositorio Raphael Burad <a>
-    <br>
-<a onclick="countGithub('E-RAPHA/trabalho-de-biologia');">linhas quantidade</a>
-        </html>
+
+</html>

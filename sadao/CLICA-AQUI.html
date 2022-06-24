@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-  
+
     <img src="./assets/vitor.png" class="vitor" id="vit">
     <img src="./assets/raphael.png" class="rapha" id="rap">
     <img src="./assets/sadao.png" class="sadao" id="sad">
@@ -19,11 +19,27 @@
 
 <body>
     <script>
-       if (window.innerHeight >=800||window.innerHeight <=500) {
+        if (window.innerHeight >=800||window.innerHeight <=500) {
             window.alert('a bagaça pode dar merda a resolução é meio difeerenteeee')
         }
-      
-        function cred(){ window.alert('quiz: raphael, slides:vitor, capa dos slides:pedro')}
+
+
+
+
+        function cred() { window.alert('quiz: raphael, slides:vitor, capa dos slides:pedro') }
+        'use strict';
+
+async function countGithub(repo) {
+    const response = await fetch(`https://api.github.com/repos/${repo}/stats/contributors`)
+    const contributors = await response.json();
+    const lineCounts = contributors.map(contributor => (
+        contributor.weeks.reduce((lineCount, week) => lineCount + week.a - week.d, 0)
+    ));
+    const lines = lineCounts.reduce((lineTotal, lineCount) => lineTotal + lineCount);
+    window.alert(lines);
+}
+ // or count anything you like
+
     </script>
     <script src="./javaScript/menu.js"></script>
 
@@ -31,8 +47,7 @@
     </script>
 
     <style>
-  
-        .pedro{
+        .pedro {
             height: 120px;
             margin-top: 800px;
             position: absolute;
@@ -40,7 +55,8 @@
             transform: rotate(1deg);
             z-index: 2;
         }
-        .sadao{
+
+        .sadao {
             height: 320px;
             margin-top: 800px;
             position: absolute;
@@ -48,7 +64,8 @@
             margin-left: -230px;
             z-index: 2;
         }
-        .rapha{
+
+        .rapha {
             height: 300px;
             position: absolute;
             margin-left: 1520px;
@@ -56,6 +73,7 @@
             transform: rotate(1deg);
             z-index: 2;
         }
+
         .vitor {
             height: 300px;
             position: absolute;
@@ -98,7 +116,8 @@
         button:hover {
             background-color: rgb(156, 252, 255);
         }
-        a{
+
+        a {
             color: aliceblue;
             font-size: 20px;
         }
@@ -106,6 +125,7 @@
 
 </body>
 
-<a href="https://github.com/E-RAPHA/trabalho-de-biologia">repositorio       Raphael Burad <a>
-
-</html>
+<a href="https://github.com/E-RAPHA/trabalho-de-biologia">repositorio Raphael Burad <a>
+    <br>
+<a onclick="countGithub('E-RAPHA/trabalho-de-biologia');">linhas quantidade</a>
+        </html>
